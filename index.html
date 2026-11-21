@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Accounting and finance internships for students in Metro Detroit and Michigan, with recruiting tips and a moderated Q&A."><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Intern Space | Detroit Accounting & Finance</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--paper:#f7f5ef;--card:#fffdf8;--ink:#101c36;--muted:#55607a;--rule:#ddd6c3;--green:#14294f;--green-ink:#fff;--warn:#c9a227;--warn-ink:#231a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0b1426;--card:#121e38;--ink:#f1ecdc;--muted:#a3aec6;--rule:#263456;--green:#e0b84a;--green-ink:#1a1400;--warn:#e0b84a;--warn-ink:#1a1400}}
+:root[data-theme="dark"]{--paper:#0b1426;--card:#121e38;--ink:#f1ecdc;--muted:#a3aec6;--rule:#263456;--green:#e0b84a;--green-ink:#1a1400;--warn:#e0b84a;--warn-ink:#1a1400}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.5 "Instrument Sans",system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:32px 20px 56px}
+h1{font:700 clamp(2rem,5vw,3.2rem)/1.05 "Newsreader",Georgia,serif;margin:0 0 10px;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:56ch;margin:0 0 20px}
+.note{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--warn);padding:8px 12px;font-size:.88rem;margin-bottom:24px}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;background:var(--card);border:1px solid var(--rule);padding:16px;margin-bottom:12px}
+label{display:flex;flex-direction:column;font-size:.85rem;font-weight:600;gap:4px}
+select,input[type=search]{font:inherit;padding:8px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:3px;width:100%}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin:14px 0 6px;font-size:.92rem}
+.chk{flex-direction:row;align-items:center;font-weight:500;gap:6px}
+button{font:inherit;cursor:pointer}
+.link{background:none;border:0;color:var(--green);text-decoration:underline;padding:4px}
+.ledger{border-top:2px solid var(--ink);margin:0;padding:0;list-style:none}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:16px 4px;border-bottom:1px solid var(--rule);background-image:linear-gradient(var(--rule) 1px,transparent 1px);background-size:100% 100%;background-repeat:no-repeat}
+.row h2{font:700 1.2rem/1.2 "Newsreader",Georgia,serif;margin:0}
+.meta{color:var(--muted);font-size:.9rem;margin:2px 0 8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.78rem;border:1px solid var(--rule);padding:1px 8px;border-radius:99px}
+.tag.i{background:var(--green);color:var(--green-ink);border-color:var(--green)}
+.due{text-align:right;min-width:128px;font-variant-numeric:tabular-nums}
+.due b{display:block;font:700 1.5rem/1 "Newsreader",Georgia,serif}
+.due small{color:var(--muted)}
+.soon{background:var(--warn);color:var(--warn-ink);padding:0 6px;border-radius:3px}
+.act{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.btn{background:var(--green);color:var(--green-ink);border:0;padding:6px 12px;border-radius:3px;font-weight:600;font-size:.88rem;text-decoration:none}
+.sv{background:none;border:1px solid var(--rule);color:var(--ink);padding:6px 10px;border-radius:3px;font-size:.88rem}
+.sv[aria-pressed=true]{border-color:var(--green);color:var(--green);font-weight:600}
+.empty{padding:32px 0;color:var(--muted)}
+.filters,.box{border-top:4px solid var(--warn);border-radius:4px}.ledger{border-top-color:var(--warn)}.row:hover{background:color-mix(in srgb,var(--green) 7%,transparent)}h1{color:var(--ink)}.tags .tag.i{font-weight:600}
+@media(max-width:560px){.row{grid-template-columns:1fr}.due,.act{text-align:left;justify-content:flex-start}}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--ink);margin-bottom:18px}.tabs button{background:none;border:0;padding:8px 14px;color:var(--muted);font-weight:600;border-bottom:4px solid transparent;margin-bottom:-2px}.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--warn)}
+.pane[hidden]{display:none}.row details{grid-column:1/-1;font-size:.92rem}.row summary{cursor:pointer;color:var(--green);font-weight:600}.row details ol{margin:8px 0 0;padding-left:20px;max-width:70ch}.row details li{margin:3px 0}
+.box{background:var(--card);border:1px solid var(--rule);padding:16px;margin:20px 0}.box h2,.pane h2.s{font:700 1.4rem/1.2 "Newsreader",Georgia,serif;margin:0 0 8px}
+.row2{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end}.row2 label{flex:1 1 180px}textarea{font:inherit;width:100%;padding:8px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:3px;min-height:70px}
+.item{border-bottom:1px solid var(--rule);padding:14px 0}.item h3{margin:0 0 4px;font:700 1.1rem/1.2 "Newsreader",Georgia,serif}.item p{margin:2px 0 6px;max-width:70ch}.rep{margin:6px 0 0 14px;padding-left:10px;border-left:3px solid var(--rule);font-size:.92rem}
+.fine{color:var(--muted);font-size:.85rem}.yrs{display:flex;gap:10px;flex-wrap:wrap;font-weight:500}.yrs label{flex-direction:row;gap:4px;font-weight:500}
+</style>
+</head>
+<body>
+<main>
+<p style="margin:0 0 8px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--muted)"><span style="color:var(--ink)">The Intern Space</span> &middot; Detroit accounting &amp; finance</p>
+<h1>Find your accounting &amp; finance internship before the deadline passes.</h1>
+<p class="lede">Open and upcoming postings for students in Metro Detroit and Michigan, free and in one list. Filter by city, class year and the area you want to work in.</p>
+<div class="note">Listings collected from the firms' own career pages on November 13, 2026. Dates and eligibility can change, so always confirm on the posting before you apply.</div>
+
+<nav class="tabs" role="tablist"><button role="tab" data-t="list" aria-selected="true">Internships</button><button role="tab" data-t="involved" aria-selected="false">Get involved on campus</button><button role="tab" data-t="qa" aria-selected="false">Ask a question</button><button role="tab" data-t="about" aria-selected="false">About</button></nav>
+<div id="p-list" class="pane">
+<section class="filters" aria-label="Filters">
+<label>Search<input type="search" id="q" placeholder="Firm or role"></label>
+<label>City<select id="city"><option value="">All cities</option></select></label>
+<label>Class year<select id="year"><option value="">Any year</option><option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate</option></select></label>
+<label>Interest<select id="int"><option value="">All areas</option></select></label>
+<label>Sort by<select id="sort"><option value="due">Closing soonest</option><option value="open">Opening soonest</option></select></label>
+</section>
+<div class="bar">
+<span id="count" aria-live="polite"></span>
+<span><label class="chk"><input type="checkbox" id="mi" checked> Michigan only</label> <label class="chk"><input type="checkbox" id="saved"> Saved only</label> <button class="link" id="reset">Clear filters</button></span>
+</div>
+<ul class="ledger" id="list"></ul>
+<div class="box"><h2>Not open right now</h2><p class="fine">Firms to watch. These have no active application, so check their sites again later.</p>
+<div class="item"><h3>BDO</h3><p>The postings we first listed have closed. See the newer BDO listings above, and confirm each one is open before you apply.</p></div>
+<div class="item"><h3>UHY</h3><p>Applications are closed.</p></div>
+<div class="item"><h3>Wipfli</h3><p>Applications are closed.</p></div>
+<div class="item"><h3>Doeren Mayhew</h3><p>Application information opens in January.</p></div>
+<div class="item"><h3>EY</h3><p>No specific posting listed yet. Check EY's student job board for openings.</p><p class="fine"><a href="https://studentjobs.ey.com" target="_blank" rel="noopener noreferrer">studentjobs.ey.com</a></p></div>
+</div>
+<div class="box"><h2>Get deadline alerts</h2><p class="fine" id="almsg">Tell us what you want and we will remind you before matching postings close.</p>
+<div class="row2"><label>Email<input type="search" id="alemail" placeholder="you@school.edu"></label><label>Interest<select id="alint"><option value="">Any area</option></select></label><button class="btn" id="alsave">Sign up</button></div></div>
+</div>
+<div id="p-involved" class="pane" hidden><h2 class="s">Build your résumé before recruiters look at it</h2><p class="lede">Firms hire students who show interest early. Pick your year to see what to do now.</p>
+<label style="max-width:240px">Your class year<select id="iy"><option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate</option></select></label><div id="ilist"></div></div>
+<div id="p-qa" class="pane" hidden><h2 class="s">Ask a question</h2><p class="fine">Anything about recruiting, classes or networking. Questions and answers are stored in this browser only until the site has a server.</p>
+<div class="box"><label>Your question<textarea id="qtext"></textarea></label><p><button class="btn" id="qpost">Post question</button></p></div><div id="qlist"></div></div>
+<div id="p-about" class="pane" hidden><h2 class="s">About The Intern Space</h2>
+<div class="box"><p>The Intern Space is a free list of accounting and finance internships for students in Metro Detroit and across Michigan.</p>
+<h2>Who runs it</h2><p>This site is independent. It is not run by or connected to any employer, university or student organization, and listing a firm here is not an endorsement.</p>
+<h2>Where the listings come from</h2><p>Listings are collected from the firms' own career pages. Dates, requirements and availability can change at any time, and some postings do not list a close date. Always confirm the details on the posting itself before you apply.</p>
+<h2>Questions and answers</h2><p>Questions are reviewed by a moderator before they appear. Answers are only posted when they can be backed by a cited source such as a school, government or professional site. If a question cannot be answered reliably, it is left unanswered.</p>
+<h2>Recruiter contacts</h2><p>The Recruiters tab links to firms' official student recruiting pages. A named person is listed only with their consent and a link to where their contact details are published.</p>
+<h2>Your privacy</h2><p>You sign in with Google or an email link so posts come from real people. Your email is used only for sign-in and, if you sign up, for deadline reminders, and it is visible only to the site's moderators. Account data is stored with Supabase, a database service. Questions and reports you send are visible only to moderators until they are approved.</p>
+<h2>Contact, corrections and removal requests</h2><p>To report a wrong or outdated listing or contact, or to ask for something to be removed, use the Report button on a recruiter entry or send a message in the Ask a question tab. You need to be signed in, and a moderator will take a look.</p></div></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+/* ---------- Supabase connection (fill these in; see README.md) ---------- */
+var SUPABASE_URL = "https://zbxnhbsutyrhzwvlfdpw.supabase.co";
+var SUPABASE_ANON_KEY = "sb_publishable_AKzAEN6z4P75tjVwQGqzFg_TnNlZveU";
+/* The anon key is meant to be public. Never paste the service_role key here. */
+
+function makeDb(sb){
+  var listeners=[];
+  function snapOf(rows){return {docs:rows.map(function(r){return {id:r.doc_id,exists:true,data:function(){return r.data}}}),size:rows.length,empty:!rows.length}}
+  function poke(name){listeners.forEach(function(l){if(l.name===name)l.tick()})}
+  function coll(name){
+    function one(id){return {
+      id:id,
+      get:async function(){var r=await sb.from("kv").select("data").eq("collection",name).eq("doc_id",id).maybeSingle();if(r.error)throw r.error;return {id:id,exists:!!r.data,data:function(){return r.data?r.data.data:undefined}}},
+      set:async function(obj){var r=await sb.from("kv").upsert({collection:name,doc_id:id,data:obj});if(r.error)throw r.error;poke(name)},
+      update:async function(obj){var cur=await this.get();var merged=Object.assign({},cur.exists?cur.data():{},obj);return this.set(merged)},
+      delete:async function(){var r=await sb.from("kv").delete().eq("collection",name).eq("doc_id",id);if(r.error)throw r.error;poke(name)}
+    }}
+    return {
+      doc:one,
+      onSnapshot:function(next,err){
+        var last="",stop=false;
+        async function tick(){
+          if(stop||(document.hidden&&last))return;
+          try{var r=await sb.from("kv").select("doc_id,data").eq("collection",name).order("updated_at",{ascending:true}).limit(1000);if(r.error)throw r.error;var j=JSON.stringify(r.data);if(j!==last){last=j;next(snapOf(r.data))}}
+          catch(e){if(err)err(e)}
+        }
+        var L={name:name,tick:tick};listeners.push(L);tick();var iv=setInterval(tick,20000);
+        return function(){stop=true;clearInterval(iv);listeners=listeners.filter(function(x){return x!==L})};
+      }
+    };
+  }
+  return {collection:coll};
+}
+
+(function(){
+  var configured=/^https:\/\//.test(SUPABASE_URL)&&SUPABASE_ANON_KEY.indexOf("PASTE_")!==0&&window.supabase;
+  var sb=configured?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
+  var db=sb?makeDb(sb):null,uid=null,email=null,isAdmin=false;
+  var ready=(async function(){
+    if(!sb)return;
+    try{
+      var r=await sb.auth.getSession(),ses=r&&r.data&&r.data.session;
+      if(ses){uid=ses.user.id;email=ses.user.email;
+        var a=await sb.from("admins").select("user_id").eq("user_id",uid).maybeSingle();isAdmin=!!(a&&a.data)}
+    }catch(e){}
+  })();
+  window.claude={use:async function(name){
+    await ready;
+    if(name==="db")return db;
+    if(name==="user")return {id:async function(){return uid},canEdit:async function(){return isAdmin},isOwner:async function(){return isAdmin}};
+    return null;
+  }};
+
+  /* Sign-in bar */
+  var main=document.querySelector("main"),nav=document.querySelector(".tabs");
+  var bar=document.createElement("div");bar.className="box";bar.style.margin="0 0 16px";bar.id="authbar";
+  function t(tag,txt,cls){var e=document.createElement(tag);if(txt)e.textContent=txt;if(cls)e.className=cls;return e}
+  function draw(){
+    bar.innerHTML="";
+    if(!sb){bar.appendChild(t("p","Sign-in is not set up yet.","fine"));return}
+    ready.then(function(){
+      bar.innerHTML="";
+      if(uid){
+        bar.appendChild(t("span","Signed in as "+email+(isAdmin?" (moderator)":"")+". "));
+        var o=t("button","Sign out","link");o.onclick=function(){sb.auth.signOut().then(function(){location.reload()})};bar.appendChild(o);return;
+      }
+      bar.appendChild(t("p","Sign in to ask questions, report errors or sign up for deadline alerts. You can browse listings without signing in.","fine"));
+      var row=t("div","","row2");
+      var g=t("button","Continue with Google","btn");
+      g.onclick=function(){sb.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+location.pathname}})};
+      var lab=t("label","Or get an email sign-in link");var inp=document.createElement("input");inp.type="email";inp.placeholder="you@school.edu";inp.setAttribute("autocomplete","email");lab.appendChild(inp);
+      var b=t("button","Email me a link","sv"),msg=t("span","","fine");
+      b.onclick=async function(){var v=inp.value.trim();if(!/^\S+@\S+\.\S+$/.test(v)){msg.textContent="Enter a valid email address.";return}
+        var r=await sb.auth.signInWithOtp({email:v,options:{emailRedirectTo:location.origin+location.pathname}});
+        msg.textContent=r.error?"Could not send the link. Try Google sign-in or try again later.":"Check your email for the sign-in link."};
+      row.appendChild(g);row.appendChild(lab);row.appendChild(b);bar.appendChild(row);bar.appendChild(msg);
+    });
+  }
+  main.insertBefore(bar,nav);draw();
+})();
+</script>
+<script>
+var TODAY=new Date();TODAY.setHours(0,0,0,0);
+var D=[];
+var $=function(i){return document.getElementById(i)};
+var REAL=[
+["Rocket","Corporate Tax Intern - Summer 2027","Detroit","Tax",[],"","","https://careers.rocket.com/us/en/job/R-084936/Corporate-Tax-Intern-Summer-2027"],
+["Rocket","Accounting Intern - Summer 2027","Detroit","Accounting",[],"","","https://careers.rocket.com/us/en/job/R-085013/Accounting-Intern-Summer-2027"],
+["Rocket","Treasury Operations Analyst Intern - Summer 2027","Detroit","Corporate finance",[],"","","https://careers.rocket.com/us/en/job/R-084321/Treasury-Operations-Analyst-Intern-Summer-2027"],
+["Ally","Summer 2027 Internship - Auto Finance: Business Line Testing","Detroit","Advisory",[],"","","https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Auto-Finance--Business-Line-Testing--Detroit--MI-Charlotte--NC-_R2600360?locationRegionStateProvince=b8372eef6b5341a39cdc95ac32790cba"],
+["Ally","Summer 2027 Internship - Auto Finance: Commercial Credit Risk","Detroit","Advisory",[],"","","https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Auto-Finance---Commercial-Credit-Risk--Detroit--MI-_R2600248?locationRegionStateProvince=b8372eef6b5341a39cdc95ac32790cba"],
+["Ally","Summer 2027 Internship - Auto Finance: Product & Strategy","Detroit","Corporate finance",[],"","","https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Auto-Finance--Product---Strategy--Detroit--MI-_R2600103?locationRegionStateProvince=b8372eef6b5341a39cdc95ac32790cba"],
+["Plante Moran","2027 Audit or Tax Intern","Ann Arbor","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Plante Moran","2027 Audit or Tax Intern","Auburn Hills","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Plante Moran","2027 Audit or Tax Intern","Detroit","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Plante Moran","2027 Audit or Tax Intern","East Lansing","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Plante Moran","2027 Audit or Tax Intern","Flint","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Plante Moran","2027 Audit or Tax Intern","Macomb","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Plante Moran","2027 Audit or Tax Intern","Kalamazoo","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Plante Moran","2027 Audit or Tax Intern","Grand Rapids","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
+["Rehmann","Audit/Tax Internship (2027)","Troy","Audit / Tax",[],"","","https://rehmann.wd108.myworkdayjobs.com/en-US/Rehmann_External_Career_Site/job/Audit-Tax-Internship-Troy--2027-_R-100542"],
+["Yeo & Yeo","Assurance Intern","Kalamazoo","Audit",[],"","","https://www.yeoandyeo.com/careers/apply-now/accounting-jobs?p=job%2FoT14Afwi"],
+["Polk","2027 Winter Internship","Bingham Farms","Accounting",[],"","","https://www.polkcpa.com/aboutus/careers/"],
+["Polk","2027 Winter Internship","Ann Arbor","Accounting",[],"","","https://www.polkcpa.com/aboutus/careers/"],
+["Polk","2027 Winter Internship","St. Clair Shores","Accounting",[],"","","https://www.polkcpa.com/aboutus/careers/"],
+["Williams International","Intern - Business Development","Pontiac","Business development",[],"","","https://recruiting.ultipro.com/WIL1006WI/JobBoard/b5d9d0d6-a149-4636-95d5-8dfede315cab/OpportunityDetail?opportunityId=f3995e18-9bd1-411f-851c-a526ed072534"],
+["Aptiv","Finance Intern","Troy","Corporate finance",[],"","","https://www.aptiv.com/en/jobs/search/open-positions/J000704404"],
+["Gentherm","Finance Intern","Novi","Corporate finance",[],"","","https://careers.gentherm.com/job/Novi-Finance-Intern-MI-48377/606546617/"],
+["Gentherm","Corporate FP&A Intern","Novi","FP&A",[],"","","https://careers.gentherm.com/job/Novi-Corporate-FP&A-Intern-MI-48377/606647017/"],
+["Novogradac","2027 Staff Accountant Intern","Detroit","Accounting",[],"","","https://novoco.wd108.myworkdayjobs.com/en-US/Novogradac/job/XMLNAME-2027-Staff-Accountant-Intern_JR100069?locations=158ede6b99e2100192cfdd78a8e50000"],
+["Archdiocese of Detroit","Accounting Intern","Detroit","Accounting",["Junior"],"","","https://www.aod.org/careers"],
+["Novogradac","2027 Staff Accountant Intern","Atlanta","Accounting",[],"","","https://novoco.wd108.myworkdayjobs.com/en-US/Novogradac/job/XMLNAME-2027-Staff-Accountant-Intern_JR100019?locations=158ede6b99e2100192cfdd78a8e50000"],
+["Novogradac","2027 Staff Accountant Intern","Cleveland","Accounting",[],"","","https://novoco.wd108.myworkdayjobs.com/en-US/Novogradac/job/XMLNAME-2027-Staff-Accountant-Intern_JR100856?locations=158ede6b99e2100192cfdd78a8e50000"],
+["Novogradac","Financial Forecasting Intern","Cleveland","FP&A",[],"","","https://novoco.wd108.myworkdayjobs.com/en-US/Novogradac/job/Financial-Forecasting-Intern_JR100783?locations=158ede6b99e2100192cfdd78a8e50000"],
+["Rocket", "Financial Systems Intern - Summer 2027", "Detroit", "Corporate finance", [], "2026-11-15", "", "https://careers.rocket.com/us/en/teams/internships", "Link goes to Rocket's internships page. Search for this title there."],
+["Rocket", "Cash Management Intern - Summer 2027", "Detroit", "Corporate finance", [], "", "", "https://careers.rocket.com/us/en/teams/internships", "Link goes to Rocket's internships page. Search for this title there."],
+["General Motors", "2027 Summer Intern - Finance Controllership", "Warren", "Accounting", [], "", "", "https://search-careers.gm.com/en/jobs/jr-202618060/2027-summer-intern-finance-controllership/", "Hybrid, 3 days a week in Detroit or Warren. For students graduating between Oct 2027 and Jun 2028."],
+["General Motors", "2027 Summer Intern - Finance Controllership", "Detroit", "Accounting", [], "", "", "https://search-careers.gm.com/en/jobs/jr-202618060/2027-summer-intern-finance-controllership/", "Hybrid, 3 days a week in Detroit or Warren. For students graduating between Oct 2027 and Jun 2028."],
+["General Motors", "2027 Summer Intern - Finance Operations", "Warren", "Corporate finance", [], "", "", "https://search-careers.gm.com/en/jobs/jr-202618055/2027-summer-intern-finance-operations/", "For students graduating between Dec 2027 and Jun 2029. Starts May or June 2027."],
+["Goldman Sachs", "2027 Wealth Management, Financial Planning Summer Analyst", "Detroit", "Banking & wealth", [], "", "", "https://higher.gs.com/roles/155670", "9 to 10 week program."],
+["Ford", "Capital Strategy Analyst Intern (Global Treasury)", "Dearborn", "Corporate finance", [], "", "", "https://www.careers.ford.com/job/dearborn/capital-strategy-analyst/48560/95397739744", "Hybrid."],
+["FordDirect", "Finance (Billing) Intern - Summer", "Dearborn", "Accounting", [], "", "", "https://www.forddirect.com/careers", "Hybrid, Tuesday to Thursday. Link goes to FordDirect's careers page. Search for this title there."],
+["Stellantis", "2027 Finance Summer Internship", "Auburn Hills", "Corporate finance", [], "", "", "https://careers.stellantis.com/early-careers/students-north-america/", "May to Aug 2027. Link goes to Stellantis's student page. Search for \"Finance\" there."],
+["Stellantis", "Finance Student Program - Corporate", "Auburn Hills", "Corporate finance", [], "", "", "https://careers.stellantis.com/job/23717106/finance-student-program-corporate/", "Corporate program. Year-round, 24 hours a week, and applications are accepted year-round."],
+["BorgWarner", "Finance Intern (FP&A)", "Auburn Hills", "FP&A", [], "", "", "https://borgwarner.wd5.myworkdayjobs.com/BorgWarner_Careers/job/Auburn-Hills---Michigan---USA/Finance-Intern--FP-A-_R2026-4038-1", "Hybrid, 20 to 30 hours a week. No visa sponsorship."],
+["BorgWarner", "Finance Intern (Year-Round)", "Auburn Hills", "Corporate finance", [], "", "", "https://borgwarner.wd5.myworkdayjobs.com/BorgWarner_Careers/job/Auburn-Hills---Michigan---USA/Finance-Intern--Year-Round-_R2026-3984", "Year-round position."],
+["Plante Moran", "2027 Internal Accounting Intern", "Southfield", "Accounting", [], "", "", "https://careers.plantemoran.com/2027-internal-accounting-intern/job/A754672BCFE68A6006DD64679A221A72", ""],
+["Plante Moran", "2027 Finance and Accounting Advisory Services Consulting Internship", "Southfield", "Advisory", [], "", "", "https://careers.plantemoran.com/2027-finance-and-accounting-advisory-services-consulting-internship/job/36988C3001987ECE6632D9421DB1E274", "Rolling applications."],
+["Plante Moran", "2027 Tax Solutions Group Intern", "Auburn Hills", "Tax", [], "", "", "https://careers.plantemoran.com/2027-tax-solutions-group-intern/job/807115000A25D495FC06F10A21B201A1", "Applications are ongoing. Also offered in other Plante Moran offices."],
+["Plante Moran", "2027 Tax Solutions Group Intern", "Detroit", "Tax", [], "", "", "https://careers.plantemoran.com/2027-tax-solutions-group-intern/job/807115000A25D495FC06F10A21B201A1", "Applications are ongoing. Also offered in other Plante Moran offices."],
+["Plante Moran", "2027 Tax Solutions Group Intern", "Southfield", "Tax", [], "", "", "https://careers.plantemoran.com/2027-tax-solutions-group-intern/job/807115000A25D495FC06F10A21B201A1", "Applications are ongoing. Also offered in other Plante Moran offices."],
+["Grant Thornton", "Audit & Assurance Intern - Summer 2027", "Southfield", "Audit", [], "", "", "https://www.grantthornton.com/careers/students", "Link goes to Grant Thornton's student page. Search for this title there."],
+["Grant Thornton", "Audit & Assurance Intern - Winter 2027", "Southfield", "Audit", [], "", "", "https://www.grantthornton.com/careers/students", "Link goes to Grant Thornton's student page. Search for this title there."],
+["Grant Thornton", "Tax Intern - Winter 2027", "Southfield", "Tax", [], "", "", "https://www.grantthornton.com/careers/students", "US citizenship required. Link goes to Grant Thornton's student page. Search for this title there."],
+["Deloitte", "Audit & Assurance Intern - Financial Statement Audit - Winter 2027", "Detroit", "Audit", [], "", "", "https://apply.deloitte.com/en_US/careers/JobDetail/Audit-Assurance-Intern-Financial-Statement-Audit-Winter-2027/360300", ""],
+["Deloitte", "Audit & Assurance Intern - Financial Statement Audit (Japanese Services Group) - Summer 2027", "Detroit", "Audit", [], "", "2026-11-29", "https://apply.deloitte.com/en_US/careers/JobDetail/Audit-Assurance-Intern-Financial-Statement-Audit-Japanese-Services-Group-Summer-2027/361864", "Requires fluency in English and Japanese and a 3.0 GPA."],
+["BDO", "Core Tax Intern - Summer 2027", "Detroit", "Tax", [], "", "", "https://ebqb.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs", "Link goes to BDO's careers site. Search for this title there."],
+["BDO", "Tax Intern, Transfer Pricing - Summer 2027", "Detroit", "Tax", [], "", "", "https://ebqb.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs", "Link goes to BDO's careers site. Search for this title there."],
+["Yeo & Yeo", "Tax & Consulting Intern (January 2027)", "Troy", "Tax / Advisory", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/oviEAfwL", "Jan 25 to Apr 2, 2027. For students on the 150-credit track."],
+["Yeo & Yeo", "Assurance Intern (August 2027)", "Ann Arbor", "Audit", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/ou9IAfwF", "Aug 23 to Dec 17, 2027, about 24 hours a week in the office. Accounting major on the 150-credit track, 3.0 GPA."],
+["Yeo & Yeo", "Business Valuation Intern (January 2027)", "Troy", "Advisory", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/o3PMAfwY", "Jan to May 2027, 12 to 20 hours a week in the office. Accounting or finance major, 3.0 GPA."],
+["Yeo & Yeo", "Business Valuation Intern (January 2027)", "Ann Arbor", "Advisory", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/o3PMAfwY", "Jan to May 2027, 12 to 20 hours a week in the office. Accounting or finance major, 3.0 GPA."],
+["MRPR", "Winter 2027 Busy Season Internship", "Southfield", "Accounting", [], "", "", "https://www.mrpr.com/careers/", "Part-time, Jan to Apr 2027, paid. Link goes to MRPR's careers page. Search for this title there."],
+["MRPR", "Winter 2027 Busy Season Internship", "Saline", "Accounting", [], "", "", "https://www.mrpr.com/careers/", "Part-time, Jan to Apr 2027, paid. Link goes to MRPR's careers page. Search for this title there."],
+["Huntington", "Summer 2027 Consumer Finance Internship", "Detroit", "Banking & wealth", [], "", "", "https://huntington.wd12.myworkdayjobs.com/HNBcareers/job/Columbus-OH/Summer-2027-Consumer-Finance-Internship_R0075623", "The Detroit role is HLC Credit Analyst, for rising seniors. Also offered in Columbus and Minneapolis."],
+["Huntington", "Summer 2027 Commercial Banking Internship", "Detroit", "Banking & wealth", [], "", "", "https://huntington.wd12.myworkdayjobs.com/HNBcareers/job/Columbus-OH/Summer-2027-Commercial-Banking-Internship_R0075257", "Detroit is a preferred location. Also offered in other cities."]
+];
+var OUT=["Atlanta","Chicago","Indianapolis","Akron","Cleveland","Racine"];
+function parts(s){return s.split(" / ")}
+function flat(i){var o=[];D.forEach(function(r){parts(r[i]).forEach(function(v){if(o.indexOf(v)<0)o.push(v)})});return o.sort()}
+D.length=0;REAL.forEach(function(r){D.push(r)});
+function store(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function load(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+var GUIDE={"Audit":["Apply early: audit firms often fill summer seats in the fall.","Show your accounting GPA and any intermediate accounting coursework.","Ask your career center to review a one-page résumé.","Prepare for behavioral questions about teamwork and attention to detail.","Send a thank-you email within 24 hours of every interview."],"Tax":["Highlight tax coursework or VITA volunteer experience.","Apply early: tax interns are often hired before busy season.","Ask a tax professional about their work in an informational chat.","Prepare to explain why you like tax research and detail work.","Follow up after interviews with a short thank-you email."],"Advisory":["Lead with problem-solving examples from class projects or clubs.","Practice a short case: structure the problem out loud.","Show comfort with Excel and presenting to groups.","Connect with alumni at the firm before you apply.","Tailor each résumé to the service line."],"Corporate finance":["Show Excel skills and any modeling or valuation coursework.","Learn the company's products and recent earnings news.","Prepare to walk through a project where you used numbers to decide something.","Apply to several companies, since postings open on different schedules.","Ask about rotations or team placement in your interview."],"FP&A":["Show Excel strength: lookups, pivots and basic forecasting.","Explain a budget or variance analysis you have done, even for a club.","Read how the company makes money before the interview.","Ask what planning cycle you would support.","Follow up with a thank-you email."],"Investment banking":["Start networking early: banks recruit far ahead of other fields.","Learn accounting basics, valuation and the three financial statements.","Practice common technical and fit questions aloud.","Join a finance or investing club and get a leadership role.","Keep a tracker of contacts, applications and deadlines."]};
+var INTS=flat(3);GUIDE.Accounting=["Show your accounting coursework and GPA clearly on a one-page résumé.","Highlight Excel skills and any accounting software you have used.","Read the posting closely and match your résumé to its listed duties.","Prepare examples of accuracy, deadlines and teamwork for interviews.","Send a short thank-you email after each interview."];GUIDE["Banking & wealth"]=["Learn the basics of financial statements, interest rates and client service before you apply.","Show Excel skills and any finance or economics coursework.","Prepare to explain why you want a client-facing or credit role.","Ask about the program length and what training is included.","Send a short thank-you email after each interview."];GUIDE["Business development"]=["Show how you communicate and work with people, using class or club examples.","Learn what the company sells and who its customers are.","Prepare a short example of a time you persuaded or organized a group.","Send a short thank-you email after each interview."];
+var saved={};try{saved=JSON.parse(localStorage.getItem("ll-saved")||"{}")}catch(e){}
+function uniq(i){return D.map(function(r){return r[i]}).filter(function(v,k,a){return a.indexOf(v)===k}).sort()}
+flat(2).forEach(function(c){$("city").add(new Option(c,c))});
+flat(3).forEach(function(c){$("int").add(new Option(c,c))});
+function days(s){return Math.round((new Date(s+"T00:00:00")-TODAY)/864e5)}
+function fmt(s){return new Date(s+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}
+function render(){
+ var q=$("q").value.toLowerCase(),c=$("city").value,y=$("year").value,t=$("int").value,s=$("saved").checked;
+ var rows=D.filter(function(r){
+  return (!r[6]||days(r[6])>=0)&&(!q||(r[0]+" "+r[1]).toLowerCase().indexOf(q)>-1)&&(!c||parts(r[2]).indexOf(c)>-1)&&(!y||!r[4].length||r[4].indexOf(y)>-1)&&(!t||parts(r[3]).indexOf(t)>-1)&&(!$("mi").checked||parts(r[2]).some(function(x){return OUT.indexOf(x)<0}))&&(!s||saved[r[0]]);
+ });
+ var k=$("sort").value==="due"?6:5;
+ rows.sort(function(a,b){return (a[k]||"9999")<(b[k]||"9999")?-1:1});
+ $("count").textContent=rows.length+(rows.length===1?" listing":" listings");
+ $("list").innerHTML=rows.length?"":'<li class="empty">No listings match. Clear a filter or two to see more.</li>';
+ rows.forEach(function(r){
+  var left=r[6]?days(r[6]):NaN,op=r[5]?days(r[5]):0,li=document.createElement("li");li.className="row";
+  var status=op>0?"Opens "+fmt(r[5]):(r[6]?"Closes "+fmt(r[6]):"Check the posting for dates");
+  var big=op>0?"Opens in "+op+" days":(!r[6]?"Close date not listed":(left===0?"Closes today":left+" days left"));
+  li.innerHTML='<div><h2></h2><p class="meta"></p><div class="tags"></div></div><div class="due"><b></b><small></small><div class="act"></div></div>';
+  li.querySelector("h2").textContent=r[1];
+  li.querySelector(".meta").textContent=r[0]+", "+parts(r[2]).join(", ");
+  if(r[8]){var nn=document.createElement("p");nn.className="fine";nn.style.margin="0 0 8px";nn.textContent=r[8];li.querySelector(".meta").after(nn)}
+  var tg=li.querySelector(".tags");
+  var a=document.createElement("span");a.className="tag i";a.textContent=r[3];tg.appendChild(a);
+  r[4].forEach(function(v){var e=document.createElement("span");e.className="tag";e.textContent=v;tg.appendChild(e)});
+  var b=li.querySelector("b");b.textContent=big;
+  if(op<=0&&left<=7){b.className="soon"}
+  li.querySelector("small").textContent=status;
+  var act=li.querySelector(".act");
+  var sv=document.createElement("button");sv.className="sv";sv.setAttribute("aria-pressed",!!saved[r[0]]);sv.textContent=saved[r[0]]?"Saved":"Save";
+  sv.onclick=function(){saved[r[0]]=!saved[r[0]];if(!saved[r[0]])delete saved[r[0]];try{localStorage.setItem("ll-saved",JSON.stringify(saved))}catch(e){}render()};
+  var ap=document.createElement("a");ap.className="btn";ap.href="#apply";ap.textContent="Apply";
+  if(r[7]){ap.href=r[7];ap.target="_blank";ap.rel="noopener"}act.appendChild(sv);act.appendChild(ap);
+  var dt=document.createElement("details"),sm=document.createElement("summary"),ol=document.createElement("ol");sm.textContent="How to apply";dt.appendChild(sm);
+  parts(r[3]).reduce(function(a,k){return a.concat(GUIDE[k]||[])},[]).forEach(function(g){var l=document.createElement("li");l.textContent=g;ol.appendChild(l)});dt.appendChild(ol);li.appendChild(dt);
+  $("list").appendChild(li);
+ });
+}
+INTS.forEach(function(c){$("alint").add(new Option(c,c))});
+document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tabs button").forEach(function(x){x.setAttribute("aria-selected",x===b)});document.querySelectorAll(".pane").forEach(function(p){p.hidden=p.id!=="p-"+b.dataset.t})}});
+$("alsave").onclick=function(){var e=$("alemail").value.trim();if(!/^\S+@\S+\.\S+$/.test(e)){$("almsg").textContent="Enter a valid email address.";return}var a=load("ll-alerts",[]);a.push({email:e,interest:$("alint").value});store("ll-alerts",a);$("almsg").textContent="Saved on this device. Sending real emails needs a server, which comes next.";$("alemail").value=""};
+var INV=[["Join the accounting or finance club","Go to one meeting this month and meet upperclassmen who can share recruiting tips.",["Freshman","Sophomore"]],["Visit your career center","Get a résumé review and ask about mock interviews and employer events.",["Freshman","Sophomore","Junior","Senior","Graduate"]],["Volunteer with VITA tax prep","Free tax help for your community gives you real tax experience to talk about.",["Sophomore","Junior","Senior"]],["Run for a club officer role","Treasurer is an easy way to show accounting skills and responsibility.",["Sophomore","Junior"]],["Join an honor society or professional group","Ask your department about groups such as Beta Alpha Psi, which often host firm events.",["Sophomore","Junior","Senior"]],["Go to firm info sessions and career fairs","Collect two contacts per event and follow up within 48 hours.",["Freshman","Sophomore","Junior","Senior","Graduate"]],["Try a case competition or student investment fund","Great for finance roles: you practice analysis and presenting.",["Sophomore","Junior","Senior"]],["Request three informational chats","Message alumni and ask 15 minutes about their path. Prepare three questions.",["Freshman","Sophomore","Junior","Senior","Graduate"]],["Plan your CPA path","Check your state's 150-credit-hour rules and talk to an advisor about your course plan.",["Junior","Senior","Graduate"]]];
+function rinv(){var y=$("iy").value,h=$("ilist");h.innerHTML="";INV.filter(function(i){return i[2].indexOf(y)>-1}).forEach(function(i){var d=document.createElement("div");d.className="item";var t=document.createElement("h3"),p=document.createElement("p");t.textContent=i[0];p.textContent=i[1];d.appendChild(t);d.appendChild(p);h.appendChild(d)})}
+$("iy").onchange=rinv;rinv();
+["q","city","year","int","sort","saved","mi"].forEach(function(i){$(i).addEventListener("input",render)});
+$("reset").onclick=function(){["q","city","year","int"].forEach(function(i){$(i).value=""});$("saved").checked=false;$("sort").value="due";render()};
+render();
+</script>
+<script>
+(async function(){
+var BAD=/\b(fuck\w*|shit\w*|bitch\w*|asshole|bastard|crap|dick|piss\w*|slut|whore|cunt|nigg\w*|fag\w*|retard\w*)\b/i;
+var TRUST=["aicpa-cima.com","thiswaytocpa.com","nasba.org","naceweb.org","cfainstitute.org","bap.org"];
+function trusted(u){try{var x=new URL(u);if(x.protocol!=="https:")return false;var h=x.hostname.replace(/^www\./,"");return /\.(edu|gov)$/.test(h)||TRUST.some(function(d){return h===d||h.slice(-d.length-1)==="."+d})}catch(e){return false}}
+function problem(t){if(t.length<10||t.length>500)return "Write between 10 and 500 characters.";if(BAD.test(t))return "Please remove inappropriate language.";if(/https?:|www\.|@\S+\.|\d{3}[-. ]\d{3}[-. ]\d{4}/i.test(t))return "Please leave out links, emails and phone numbers.";return ""}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+var db=null,user=null,admin=false,posts=[],pend=[],rawp=[],hand={},uid=null;
+var qp=document.querySelector("#p-qa .fine");qp.textContent="Questions and replies are checked for language by the page and then reviewed by a moderator before they appear. Answers only come from a cited trusted source. If no source covers a question, it stays unanswered.";
+function msg(t){var m=$("qmsg");if(!m){m=el("span","fine");m.id="qmsg";$("qpost").parentNode.appendChild(m)}m.textContent=" "+t}
+function sub(o){if(!db||!uid){msg("Sign in to post a question or reply.");return}
+var id="p"+Date.now()+Math.floor(Math.random()*1e4);o.ts=Date.now();o.id=id;var ref=db.collection("pending").doc(uid);
+ref.get().then(function(d){var a=(d&&d.exists&&d.data().items)||[];a=a.slice(-49);a.push(o);return ref.set({items:a})}).then(function(){msg("Sent for review. It shows once a moderator approves it.")},function(){msg("Could not send. Please try again.")})}
+$("qpost").onclick=function(){var v=$("qtext").value.trim(),p=problem(v);if(p){msg(p);return}sub({kind:"q",text:v});$("qtext").value=""};
+function rq(){var h=$("qlist");h.innerHTML="";var qs=posts.filter(function(p){return p.kind==="q"}).sort(function(a,b){return b.ts-a.ts});
+if(!qs.length)h.appendChild(el("p","fine","No approved questions yet. Be the first to ask."));
+qs.forEach(function(q){var d=el("div","item");d.appendChild(el("h3","",q.text));
+if(q.answer){d.appendChild(el("p","",q.answer));var s=el("p","fine","Source: ");(q.sources||[]).forEach(function(x,i){if(!trusted(x.url))return;var a=el("a","",x.url.replace(/^https:\/\/(www\.)?/,""));a.href=x.url;a.target="_blank";a.rel="noopener noreferrer";if(i)s.appendChild(document.createTextNode(", "));s.appendChild(a)});s.appendChild(document.createTextNode(". Reviewed by a moderator. Check the source for your situation."));d.appendChild(s)}
+else d.appendChild(el("p","fine","No verified answer yet. Your career center is a good place to ask."));
+posts.filter(function(r){return r.kind==="reply"&&r.parent===q.id}).forEach(function(r){d.appendChild(el("div","rep",r.text+" (student reply, not verified)"))});
+var f=el("div","row2"),i=el("input");i.type="search";i.placeholder="Add a reply";i.setAttribute("aria-label","Reply");i.style.flex="1";var b=el("button","sv","Reply");
+b.onclick=function(){var p=problem(i.value.trim());if(p){msg(p);return}sub({kind:"reply",parent:q.id,text:i.value.trim()});i.value=""};f.appendChild(i);f.appendChild(b);d.appendChild(f);h.appendChild(d)})}
+rq();
+function showTab(t){document.querySelectorAll(".tabs button").forEach(function(x){x.setAttribute("aria-selected",x.dataset.t===t)});document.querySelectorAll(".pane").forEach(function(p){p.hidden=p.id!=="p-"+t})}
+function rr(){var h=$("rlist");if(!h)return;h.innerHTML="";if(!pend.length)h.appendChild(el("p","fine","Nothing waiting for review."));
+pend.sort(function(a,b){return a.ts-b.ts}).forEach(function(p){var d=el("div","item");d.appendChild(el("h3","",(p.kind==="q"?"Question: ":"Reply: ")+p.text));var st=el("p","fine");d.appendChild(st);
+var rej=el("button","sv","Reject");rej.onclick=function(){db.collection("handled").doc(p.id).set({ts:Date.now()})};
+if(p.kind==="reply"){var ok=el("button","btn","Approve reply");ok.onclick=function(){if(BAD.test(p.text)){st.textContent="Contains inappropriate language. Reject it.";return}db.collection("posts").doc(p.id).set({kind:"reply",parent:p.parent,text:p.text,ts:p.ts}).then(function(){db.collection("handled").doc(p.id).set({ts:Date.now()})})};d.appendChild(ok);d.appendChild(rej);$("rlist").appendChild(d);return}
+var u=el("input");u.type="search";u.placeholder="Source URL (https, .edu, .gov or trusted career site)";u.style.margin="6px 0";var tx=el("textarea");tx.placeholder="Passage from the source, to check your answer against (not published)";
+var dr=el("textarea");dr.placeholder="Your answer, written only from the source above. Leave empty to publish the question without an answer.";dr.style.margin="6px 0";
+var ap=el("button","btn","Approve");ap.onclick=function(){var a=dr.value.trim();if(a&&(BAD.test(a)||!trusted(u.value.trim()))){st.textContent="Answer needs clean language and a trusted source.";return}
+var o={kind:"q",text:p.text,ts:p.ts};if(a){o.answer=a;o.sources=[{url:u.value.trim()}]}db.collection("posts").doc(p.id).set(o).then(function(){db.collection("handled").doc(p.id).set({ts:Date.now()})})};
+d.appendChild(u);d.appendChild(tx);d.appendChild(dr);d.appendChild(ap);d.appendChild(rej);$("rlist").appendChild(d)})}
+try{db=await claude.use("db");user=await claude.use("user");admin=!!(user&&await user.canEdit());uid=await user.id()}catch(e){}
+if(db){db.collection("posts").onSnapshot(function(s){posts=s.docs.map(function(d){var o=d.data();o.id=d.id;return o});rq()},function(){});
+if(admin){var tb=el("button","","Review");tb.setAttribute("role","tab");tb.dataset.t="rev";tb.setAttribute("aria-selected","false");tb.onclick=function(){showTab("rev")};document.querySelector(".tabs").appendChild(tb);
+var pn=el("div","pane");pn.id="p-rev";pn.hidden=true;pn.appendChild(el("h2","s","Moderator review"));pn.appendChild(el("p","fine","Approve only what is respectful and accurate. Answers need a trusted source link, and you write them yourself from that source. Company career pages not on the list need to be checked by you first."));var rl=el("div");rl.id="rlist";pn.appendChild(rl);document.querySelector("main").appendChild(pn);
+function setp(){pend=rawp.filter(function(p){return !hand[p.id]});rr()}
+db.collection("pending").onSnapshot(function(s){rawp=[];s.docs.forEach(function(d){((d.data()||{}).items||[]).forEach(function(it){rawp.push(it)})});setp()},function(){});
+db.collection("handled").onSnapshot(function(s){hand={};s.docs.forEach(function(d){hand[d.id]=1});setp()},function(){})}}
+})();
+</script>
+<script>
+(async function(){
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+function https(u){try{return new URL(u).protocol==="https:"}catch(e){return false}}
+var BAD=/\b(fuck\w*|shit\w*|bitch\w*|asshole|bastard|crap|dick|piss\w*|slut|whore|cunt|nigg\w*|fag\w*|retard\w*)\b/i;
+var START=[
+{id:"s1",firm:"Deloitte",url:"https://www.deloitte.com/us/en/careers/student-careers.html",route:"Apply on Deloitte's careers site. Deloitte's program pages tell students to contact their campus recruiter, and point to a campus map and a recruiting tips page."},
+{id:"s2",firm:"PwC",url:"https://pwc.com/us/en/careers/entry-level/programs-events.html",route:"PwC's student programs and events page. PwC's postings point students to its US Careers Recruiter Map to find and connect with a school recruiter."},
+{id:"s3",firm:"EY",url:"https://studentjobs.ey.com",route:"Apply on the EY student job board. EY also lists virtual events called EY Next Steps and tips on its student page at ey.com/us/students."},
+{id:"s4",firm:"KPMG",url:"https://www.kpmguscareers.com",route:"Apply on KPMG's US careers site and check it for student events and recruiting guidance."}];
+var rec=[],reps=[],db=null,admin=false,ver={},uid=null,alerts=[];
+$("almsg").textContent="Pick an area and add your email. The site owner will email you before matching postings close. Your email is visible only to site moderators.";
+$("alsave").onclick=async function(){var e=$("alemail").value.trim(),m=$("almsg");if(!/^\S+@\S+\.\S+$/.test(e)){m.textContent="Enter a valid email address.";return}if(!db||!uid){m.textContent="Sign in to sign up for alerts.";return}try{await db.collection("alerts").doc(uid).set({email:e,interest:$("alint").value,ts:Date.now()});m.textContent="You are on the list. The site owner will email you about deadlines for this area.";$("alemail").value=""}catch(x){m.textContent="Could not save. Please try again."}};
+function vd(e){return ver[e.id]||(e.id.charAt(0)==="s"?Date.parse("2026-11-13"):e.ts)}
+function age(e){return Math.floor((Date.now()-vd(e))/864e5)}
+var nav=document.querySelector(".tabs"),tb=el("button","","Recruiters");tb.setAttribute("role","tab");tb.dataset.t="rec";tb.setAttribute("aria-selected","false");
+tb.onclick=function(){document.querySelectorAll(".tabs button").forEach(function(x){x.setAttribute("aria-selected",x===tb)});document.querySelectorAll(".pane").forEach(function(p){p.hidden=p.id!=="p-rec"})};
+nav.insertBefore(tb,nav.children[3]);
+var pn=el("div","pane");pn.id="p-rec";pn.hidden=true;document.querySelector("main").appendChild(pn);
+pn.appendChild(el("h2","s","Recruiters"));
+pn.appendChild(el("p","fine","Official student recruiting pages, with named contacts only when the person agreed to be listed. Firms change these pages, so confirm on the firm's site."));
+var tip=el("div","box");tip.appendChild(el("h2","","Before you reach out"));
+var ul=el("ul");["Apply on the firm's website first. Reaching out adds to an application, it does not replace one.","Start with the official recruiting page or school recruiter route the firm lists. Use a named person only if they are listed here.","Keep your note short: your name, school, class year, the role you are interested in, and one specific question.","Use your school email, proofread it, and check you spelled the person's name and the firm's name correctly.","Send one message. If you hear nothing, wait a week or two and send one polite follow-up.","Do not email several people at the same firm about the same thing, and do not share anyone's contact details.","Thank people for their time, even if the answer is no."].forEach(function(t){ul.appendChild(el("li","",t))});tip.appendChild(ul);pn.appendChild(tip);
+var lst=el("div");pn.appendChild(lst);
+var fm=el("div");pn.appendChild(fm);
+function card(e,mine){var d=el("div","item");d.appendChild(el("h3","",e.firm));d.appendChild(el("p","",e.route));
+var p=el("p","fine","Official page: ");var a=el("a","",e.url.replace(/^https:\/\/(www\.)?/,""));a.href=e.url;a.target="_blank";a.rel="noopener noreferrer";p.appendChild(a);d.appendChild(p);
+if(e.person){var c=el("p","",e.person+(e.role?", "+e.role:"")+" ");if(e.email){var m=el("a","",e.email);m.href="mailto:"+e.email;c.appendChild(m)}d.appendChild(c);
+var s=el("p","fine","Listed with their consent. Source: ");var sa=el("a","",e.source.replace(/^https:\/\/(www\.)?/,""));sa.href=e.source;sa.target="_blank";sa.rel="noopener noreferrer";s.appendChild(sa);d.appendChild(s)}
+var vl=el("p","fine","Verified "+new Date(vd(e)).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})+".");
+if(age(e)>60){vl.textContent="Last verified "+age(e)+" days ago. This may be out of date, so confirm on the firm's site.";var wb=el("span","soon","Check first");vl.insertBefore(wb,vl.firstChild);vl.insertBefore(document.createTextNode(" "),wb.nextSibling)}
+d.appendChild(vl);
+if(admin&&db){var mv=el("button","sv","Mark verified today");mv.style.marginRight="8px";mv.onclick=function(){db.collection("verified").doc(e.id).set({ts:Date.now()})};d.appendChild(mv)}
+var b=el("button","sv","Report outdated or incorrect");b.onclick=function(){if(!db||!uid){b.textContent="Sign in to report";return}var rid="r"+Date.now()+Math.floor(Math.random()*1e4),ref=db.collection("reports").doc(uid);ref.get().then(function(d){var a=(d&&d.exists&&d.data().items)||[];a=a.slice(-49);a.push({id:rid,entry:e.firm+(e.person?" / "+e.person:""),ts:Date.now()});return ref.set({items:a})}).then(function(){b.textContent="Thanks, reported";b.disabled=true},function(){b.textContent="Could not send"})};d.appendChild(b);
+if(mine&&admin){var r=el("button","link","Remove");r.onclick=function(){db.collection("recruiters").doc(e.id).delete()};d.appendChild(r)}return d}
+function draw(){lst.innerHTML="";START.forEach(function(e){lst.appendChild(card(e,false))});rec.forEach(function(e){lst.appendChild(card(e,true))});
+fm.innerHTML="";if(!admin)return;
+var bx=el("div","box");bx.appendChild(el("h2","","Add an entry (moderators)"));var sc=START.concat(rec).filter(function(e){return age(e)>60}).length;bx.appendChild(el("p","fine",sc?sc+" entr"+(sc>1?"ies are":"y is")+" past 60 days since last verified. Re-check them and press Mark verified today.":"All entries were verified in the last 60 days."));bx.appendChild(el("p","fine","Add a named contact only with their consent, and only with a link to where the firm or the person published it. Leave the person fields empty to add just a firm."));
+var g=el("div","filters");g.style.cssText="border:0;padding:0";var F={};
+[["firm","Firm"],["url","Official page (https)"],["route","How students should reach them"],["person","Contact name (optional)"],["role","Contact role"],["email","Contact email"],["source","Page where this contact is published (https)"]].forEach(function(f){var l=el("label","",f[1]),i=el("input");i.type="search";l.appendChild(i);g.appendChild(l);F[f[0]]=i});bx.appendChild(g);
+var cl=el("label","chk"),ck=el("input");ck.type="checkbox";cl.appendChild(ck);cl.appendChild(document.createTextNode(" This person agreed to be listed"));bx.appendChild(cl);
+var ms=el("span","fine"),ad=el("button","btn","Add entry");ad.style.margin="8px 8px 0 0";
+ad.onclick=function(){var v={};Object.keys(F).forEach(function(k){v[k]=F[k].value.trim()});
+if(!v.firm||!https(v.url)||!v.route){ms.textContent="Firm, an https official page and instructions are required.";return}
+if(BAD.test(v.firm+" "+v.route+" "+v.person+" "+v.role)){ms.textContent="Remove inappropriate language.";return}
+if(v.person||v.email){if(!v.person||!/^\S+@\S+\.\S+$/.test(v.email)){ms.textContent="Add the contact's name and a valid email.";return}if(!https(v.source)||!ck.checked){ms.textContent="A named contact needs a published source link and consent.";return}}
+var o={firm:v.firm,url:v.url,route:v.route,ts:Date.now()};if(v.person){o.person=v.person;o.role=v.role;o.email=v.email;o.source=v.source;o.consent=true}
+db.collection("recruiters").doc("c"+Date.now()).set(o).then(function(){ms.textContent="Added."},function(){ms.textContent="Could not save."})};
+bx.appendChild(ad);bx.appendChild(ms);
+bx.appendChild(el("h2","","Alert signups ("+alerts.length+")"));alerts.forEach(function(a){bx.appendChild(el("p","fine",a.email+" | "+(a.interest||"Any area")))});
+if(reps.length){bx.appendChild(el("h2","","Reports from students"));reps.forEach(function(r){var p=el("p","fine",r.entry+" ");var x=el("button","link","Dismiss");x.onclick=function(){db.collection("handled").doc(r.id).set({ts:Date.now()})};p.appendChild(x);bx.appendChild(p)})}
+fm.appendChild(bx)}
+draw();
+try{db=await claude.use("db");var u=await claude.use("user");admin=!!(u&&await u.canEdit());uid=await u.id()}catch(e){}
+
+if(db){db.collection("recruiters").onSnapshot(function(s){rec=s.docs.map(function(d){var o=d.data();o.id=d.id;return o}).filter(function(o){return https(o.url)&&(!o.person||https(o.source))}).sort(function(a,b){return a.ts-b.ts});draw()},function(){});
+db.collection("verified").onSnapshot(function(s){ver={};s.docs.forEach(function(d){ver[d.id]=d.data().ts});draw()},function(){});
+if(admin)db.collection("alerts").onSnapshot(function(s){alerts=s.docs.map(function(d){return d.data()});draw()},function(){});
+if(admin)(function(){var rawr=[],hnd={};function setr(){reps=rawr.filter(function(r){return !hnd[r.id]});draw()}db.collection("reports").onSnapshot(function(s){rawr=[];s.docs.forEach(function(d){((d.data()||{}).items||[]).forEach(function(it){rawr.push(it)})});setr()},function(){});db.collection("handled").onSnapshot(function(s){hnd={};s.docs.forEach(function(d){hnd[d.id]=1});setr()},function(){})})();else draw()}
+})();
+</script>
+</body>
+</html>
