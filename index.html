@@ -56,7 +56,7 @@ button{font:inherit;cursor:pointer}
 <p style="margin:0 0 8px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--muted)"><span style="color:var(--ink)">The Intern Space</span> &middot; Detroit accounting &amp; finance</p>
 <h1>Find your accounting &amp; finance internship before the deadline passes.</h1>
 <p class="lede">Open and upcoming postings for students in Metro Detroit and Michigan, free and in one list. Filter by city, class year and the area you want to work in.</p>
-<div class="note">Listings collected from the firms' own career pages on November 13, 2026. Dates and eligibility can change, so always confirm on the posting before you apply.</div>
+<div class="note">Listings collected from the firms' own career pages on November 22, 2026. Dates and eligibility can change, so always confirm on the posting before you apply.</div>
 
 <nav class="tabs" role="tablist"><button role="tab" data-t="list" aria-selected="true">Internships</button><button role="tab" data-t="involved" aria-selected="false">Get involved on campus</button><button role="tab" data-t="qa" aria-selected="false">Ask a question</button><button role="tab" data-t="about" aria-selected="false">About</button></nav>
 <div id="p-list" class="pane">
@@ -77,6 +77,12 @@ button{font:inherit;cursor:pointer}
 <div class="item"><h3>UHY</h3><p>Applications are closed.</p></div>
 <div class="item"><h3>Wipfli</h3><p>Applications are closed.</p></div>
 <div class="item"><h3>Doeren Mayhew</h3><p>Application information opens in January.</p></div>
+<div class="item"><h3>Yeo &amp; Yeo</h3><p>Their internship postings have closed and no internships are listed right now. Check their careers page again later.</p></div>
+<div class="item"><h3>Huntington</h3><p>The internship postings we listed are no longer available. Check Huntington's careers site for new ones.</p></div>
+<div class="item"><h3>General Motors</h3><p>The finance internship postings we listed are no longer available. Check GM's careers site for new ones.</p></div>
+<div class="item"><h3>Goldman Sachs</h3><p>The wealth management posting we listed is no longer available.</p></div>
+<div class="item"><h3>BorgWarner</h3><p>The finance internship postings we listed are no longer available.</p></div>
+<div class="item"><h3>Ford</h3><p>The Global Treasury internship posting we listed is no longer available.</p></div>
 <div class="item"><h3>EY</h3><p>No specific posting listed yet. Check EY's student job board for openings.</p><p class="fine"><a href="https://studentjobs.ey.com" target="_blank" rel="noopener noreferrer">studentjobs.ey.com</a></p></div>
 </div>
 <div class="box"><h2>Get deadline alerts</h2><p class="fine" id="almsg">Tell us what you want and we will remind you before matching postings close.</p>
@@ -134,14 +140,14 @@ function makeDb(sb){
 (function(){
   var configured=/^https:\/\//.test(SUPABASE_URL)&&SUPABASE_ANON_KEY.indexOf("PASTE_")!==0&&window.supabase;
   var sb=configured?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
-  var db=sb?makeDb(sb):null,uid=null,email=null,isAdmin=false;
+  var db=sb?makeDb(sb):null,uid=null,email=null,isAdmin=false,adminErr=null;
   var ready=(async function(){
     if(!sb)return;
     try{
       var r=await sb.auth.getSession(),ses=r&&r.data&&r.data.session;
       if(ses){uid=ses.user.id;email=ses.user.email;
-        var a=await sb.from("admins").select("user_id").eq("user_id",uid).maybeSingle();isAdmin=!!(a&&a.data)}
-    }catch(e){}
+        var a=await sb.from("admins").select("user_id").eq("user_id",uid).maybeSingle();isAdmin=!!(a&&a.data);if(a&&a.error)adminErr=a.error.message||String(a.error)}
+    }catch(e){adminErr=(e&&e.message)||String(e)}
   })();
   window.claude={use:async function(name){
     await ready;
@@ -161,7 +167,7 @@ function makeDb(sb){
       bar.innerHTML="";
       if(uid){
         bar.appendChild(t("span","Signed in as "+email+(isAdmin?" (moderator)":"")+". "));
-        var o=t("button","Sign out","link");o.onclick=function(){sb.auth.signOut().then(function(){location.reload()})};bar.appendChild(o);return;
+        var o=t("button","Sign out","link");o.onclick=function(){sb.auth.signOut().then(function(){location.reload()})};bar.appendChild(o);if(adminErr)bar.appendChild(t("p","Moderator check failed: "+adminErr,"fine"));return;
       }
       bar.appendChild(t("p","Sign in to ask questions, report errors or sign up for deadline alerts. You can browse listings without signing in.","fine"));
       var row=t("div","","row2");
@@ -183,9 +189,6 @@ var TODAY=new Date();TODAY.setHours(0,0,0,0);
 var D=[];
 var $=function(i){return document.getElementById(i)};
 var REAL=[
-["Rocket","Corporate Tax Intern - Summer 2027","Detroit","Tax",[],"","","https://careers.rocket.com/us/en/job/R-084936/Corporate-Tax-Intern-Summer-2027"],
-["Rocket","Accounting Intern - Summer 2027","Detroit","Accounting",[],"","","https://careers.rocket.com/us/en/job/R-085013/Accounting-Intern-Summer-2027"],
-["Rocket","Treasury Operations Analyst Intern - Summer 2027","Detroit","Corporate finance",[],"","","https://careers.rocket.com/us/en/job/R-084321/Treasury-Operations-Analyst-Intern-Summer-2027"],
 ["Ally","Summer 2027 Internship - Auto Finance: Business Line Testing","Detroit","Advisory",[],"","","https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Auto-Finance--Business-Line-Testing--Detroit--MI-Charlotte--NC-_R2600360?locationRegionStateProvince=b8372eef6b5341a39cdc95ac32790cba"],
 ["Ally","Summer 2027 Internship - Auto Finance: Commercial Credit Risk","Detroit","Advisory",[],"","","https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Auto-Finance---Commercial-Credit-Risk--Detroit--MI-_R2600248?locationRegionStateProvince=b8372eef6b5341a39cdc95ac32790cba"],
 ["Ally","Summer 2027 Internship - Auto Finance: Product & Strategy","Detroit","Corporate finance",[],"","","https://ally.wd1.myworkdayjobs.com/en-US/Ally/job/Detroit-MI/Summer-2027-Internship---Auto-Finance--Product---Strategy--Detroit--MI-_R2600103?locationRegionStateProvince=b8372eef6b5341a39cdc95ac32790cba"],
@@ -198,7 +201,6 @@ var REAL=[
 ["Plante Moran","2027 Audit or Tax Intern","Kalamazoo","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
 ["Plante Moran","2027 Audit or Tax Intern","Grand Rapids","Audit / Tax",[],"","","https://careers.plantemoran.com/2027-audit-or-tax-intern/job/5805524CAF683F5083CB4626A821B480"],
 ["Rehmann","Audit/Tax Internship (2027)","Troy","Audit / Tax",[],"","","https://rehmann.wd108.myworkdayjobs.com/en-US/Rehmann_External_Career_Site/job/Audit-Tax-Internship-Troy--2027-_R-100542"],
-["Yeo & Yeo","Assurance Intern","Kalamazoo","Audit",[],"","","https://www.yeoandyeo.com/careers/apply-now/accounting-jobs?p=job%2FoT14Afwi"],
 ["Polk","2027 Winter Internship","Bingham Farms","Accounting",[],"","","https://www.polkcpa.com/aboutus/careers/"],
 ["Polk","2027 Winter Internship","Ann Arbor","Accounting",[],"","","https://www.polkcpa.com/aboutus/careers/"],
 ["Polk","2027 Winter Internship","St. Clair Shores","Accounting",[],"","","https://www.polkcpa.com/aboutus/careers/"],
@@ -213,17 +215,9 @@ var REAL=[
 ["Novogradac","Financial Forecasting Intern","Cleveland","FP&A",[],"","","https://novoco.wd108.myworkdayjobs.com/en-US/Novogradac/job/Financial-Forecasting-Intern_JR100783?locations=158ede6b99e2100192cfdd78a8e50000"],
 ["Rocket", "Financial Systems Intern - Summer 2027", "Detroit", "Corporate finance", [], "2026-11-15", "", "https://careers.rocket.com/us/en/teams/internships", "Link goes to Rocket's internships page. Search for this title there."],
 ["Rocket", "Cash Management Intern - Summer 2027", "Detroit", "Corporate finance", [], "", "", "https://careers.rocket.com/us/en/teams/internships", "Link goes to Rocket's internships page. Search for this title there."],
-["General Motors", "2027 Summer Intern - Finance Controllership", "Warren", "Accounting", [], "", "", "https://search-careers.gm.com/en/jobs/jr-202618060/2027-summer-intern-finance-controllership/", "Hybrid, 3 days a week in Detroit or Warren. For students graduating between Oct 2027 and Jun 2028."],
-["General Motors", "2027 Summer Intern - Finance Controllership", "Detroit", "Accounting", [], "", "", "https://search-careers.gm.com/en/jobs/jr-202618060/2027-summer-intern-finance-controllership/", "Hybrid, 3 days a week in Detroit or Warren. For students graduating between Oct 2027 and Jun 2028."],
-["General Motors", "2027 Summer Intern - Finance Operations", "Warren", "Corporate finance", [], "", "", "https://search-careers.gm.com/en/jobs/jr-202618055/2027-summer-intern-finance-operations/", "For students graduating between Dec 2027 and Jun 2029. Starts May or June 2027."],
-["Goldman Sachs", "2027 Wealth Management, Financial Planning Summer Analyst", "Detroit", "Banking & wealth", [], "", "", "https://higher.gs.com/roles/155670", "9 to 10 week program."],
-["Ford", "Capital Strategy Analyst Intern (Global Treasury)", "Dearborn", "Corporate finance", [], "", "", "https://www.careers.ford.com/job/dearborn/capital-strategy-analyst/48560/95397739744", "Hybrid."],
 ["FordDirect", "Finance (Billing) Intern - Summer", "Dearborn", "Accounting", [], "", "", "https://www.forddirect.com/careers", "Hybrid, Tuesday to Thursday. Link goes to FordDirect's careers page. Search for this title there."],
 ["Stellantis", "2027 Finance Summer Internship", "Auburn Hills", "Corporate finance", [], "", "", "https://careers.stellantis.com/early-careers/students-north-america/", "May to Aug 2027. Link goes to Stellantis's student page. Search for \"Finance\" there."],
 ["Stellantis", "Finance Student Program - Corporate", "Auburn Hills", "Corporate finance", [], "", "", "https://careers.stellantis.com/job/23717106/finance-student-program-corporate/", "Corporate program. Year-round, 24 hours a week, and applications are accepted year-round."],
-["BorgWarner", "Finance Intern (FP&A)", "Auburn Hills", "FP&A", [], "", "", "https://borgwarner.wd5.myworkdayjobs.com/BorgWarner_Careers/job/Auburn-Hills---Michigan---USA/Finance-Intern--FP-A-_R2026-4038-1", "Hybrid, 20 to 30 hours a week. No visa sponsorship."],
-["BorgWarner", "Finance Intern (Year-Round)", "Auburn Hills", "Corporate finance", [], "", "", "https://borgwarner.wd5.myworkdayjobs.com/BorgWarner_Careers/job/Auburn-Hills---Michigan---USA/Finance-Intern--Year-Round-_R2026-3984", "Year-round position."],
-["Plante Moran", "2027 Internal Accounting Intern", "Southfield", "Accounting", [], "", "", "https://careers.plantemoran.com/2027-internal-accounting-intern/job/A754672BCFE68A6006DD64679A221A72", ""],
 ["Plante Moran", "2027 Finance and Accounting Advisory Services Consulting Internship", "Southfield", "Advisory", [], "", "", "https://careers.plantemoran.com/2027-finance-and-accounting-advisory-services-consulting-internship/job/36988C3001987ECE6632D9421DB1E274", "Rolling applications."],
 ["Plante Moran", "2027 Tax Solutions Group Intern", "Auburn Hills", "Tax", [], "", "", "https://careers.plantemoran.com/2027-tax-solutions-group-intern/job/807115000A25D495FC06F10A21B201A1", "Applications are ongoing. Also offered in other Plante Moran offices."],
 ["Plante Moran", "2027 Tax Solutions Group Intern", "Detroit", "Tax", [], "", "", "https://careers.plantemoran.com/2027-tax-solutions-group-intern/job/807115000A25D495FC06F10A21B201A1", "Applications are ongoing. Also offered in other Plante Moran offices."],
@@ -231,18 +225,11 @@ var REAL=[
 ["Grant Thornton", "Audit & Assurance Intern - Summer 2027", "Southfield", "Audit", [], "", "", "https://www.grantthornton.com/careers/students", "Link goes to Grant Thornton's student page. Search for this title there."],
 ["Grant Thornton", "Audit & Assurance Intern - Winter 2027", "Southfield", "Audit", [], "", "", "https://www.grantthornton.com/careers/students", "Link goes to Grant Thornton's student page. Search for this title there."],
 ["Grant Thornton", "Tax Intern - Winter 2027", "Southfield", "Tax", [], "", "", "https://www.grantthornton.com/careers/students", "US citizenship required. Link goes to Grant Thornton's student page. Search for this title there."],
-["Deloitte", "Audit & Assurance Intern - Financial Statement Audit - Winter 2027", "Detroit", "Audit", [], "", "", "https://apply.deloitte.com/en_US/careers/JobDetail/Audit-Assurance-Intern-Financial-Statement-Audit-Winter-2027/360300", ""],
 ["Deloitte", "Audit & Assurance Intern - Financial Statement Audit (Japanese Services Group) - Summer 2027", "Detroit", "Audit", [], "", "2026-11-29", "https://apply.deloitte.com/en_US/careers/JobDetail/Audit-Assurance-Intern-Financial-Statement-Audit-Japanese-Services-Group-Summer-2027/361864", "Requires fluency in English and Japanese and a 3.0 GPA."],
 ["BDO", "Core Tax Intern - Summer 2027", "Detroit", "Tax", [], "", "", "https://ebqb.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs", "Link goes to BDO's careers site. Search for this title there."],
 ["BDO", "Tax Intern, Transfer Pricing - Summer 2027", "Detroit", "Tax", [], "", "", "https://ebqb.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs", "Link goes to BDO's careers site. Search for this title there."],
-["Yeo & Yeo", "Tax & Consulting Intern (January 2027)", "Troy", "Tax / Advisory", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/oviEAfwL", "Jan 25 to Apr 2, 2027. For students on the 150-credit track."],
-["Yeo & Yeo", "Assurance Intern (August 2027)", "Ann Arbor", "Audit", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/ou9IAfwF", "Aug 23 to Dec 17, 2027, about 24 hours a week in the office. Accounting major on the 150-credit track, 3.0 GPA."],
-["Yeo & Yeo", "Business Valuation Intern (January 2027)", "Troy", "Advisory", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/o3PMAfwY", "Jan to May 2027, 12 to 20 hours a week in the office. Accounting or finance major, 3.0 GPA."],
-["Yeo & Yeo", "Business Valuation Intern (January 2027)", "Ann Arbor", "Advisory", [], "", "", "https://jobs.jobvite.com/yeoandyeo/job/o3PMAfwY", "Jan to May 2027, 12 to 20 hours a week in the office. Accounting or finance major, 3.0 GPA."],
 ["MRPR", "Winter 2027 Busy Season Internship", "Southfield", "Accounting", [], "", "", "https://www.mrpr.com/careers/", "Part-time, Jan to Apr 2027, paid. Link goes to MRPR's careers page. Search for this title there."],
 ["MRPR", "Winter 2027 Busy Season Internship", "Saline", "Accounting", [], "", "", "https://www.mrpr.com/careers/", "Part-time, Jan to Apr 2027, paid. Link goes to MRPR's careers page. Search for this title there."],
-["Huntington", "Summer 2027 Consumer Finance Internship", "Detroit", "Banking & wealth", [], "", "", "https://huntington.wd12.myworkdayjobs.com/HNBcareers/job/Columbus-OH/Summer-2027-Consumer-Finance-Internship_R0075623", "The Detroit role is HLC Credit Analyst, for rising seniors. Also offered in Columbus and Minneapolis."],
-["Huntington", "Summer 2027 Commercial Banking Internship", "Detroit", "Banking & wealth", [], "", "", "https://huntington.wd12.myworkdayjobs.com/HNBcareers/job/Columbus-OH/Summer-2027-Commercial-Banking-Internship_R0075257", "Detroit is a preferred location. Also offered in other cities."]
 ];
 var OUT=["Atlanta","Chicago","Indianapolis","Akron","Cleveland","Racine"];
 function parts(s){return s.split(" / ")}
